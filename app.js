@@ -18,7 +18,7 @@ function getChildren(array, parent_index) {
 	for(let i = 0; i < array.length; i++) {
 		let node = array[i]
 		if(node["id"] === parent_index) {
-			render += "<ul>" + node["name"]
+			render += "<ul><li>" + node["name"]
 			continue
 		}
 		if(node["parent"] === parent_index) {
@@ -29,7 +29,7 @@ function getChildren(array, parent_index) {
 			// render += "</li>"
 		}
 	}
-	render += "</ul>"
+	render += "</li></ul>"
 	return children
 }
 
