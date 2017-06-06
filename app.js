@@ -22,11 +22,9 @@ function getChildren(array, parent_index) {
 			continue
 		}
 		if(node["parent"] === parent_index) {
-			// render += "<li>" + children[node["name"]]
 			children[node["name"]] = {
 				"id" : node["id"], "name" : node["name"], "children" : getChildren(array, node["id"])
 			}
-			// render += "</li>"
 		}
 	}
 	render += "</li></ul>"
