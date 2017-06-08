@@ -31,5 +31,6 @@ function getChildren(array, parent_index) {
 	return children
 }
 
+let items = getChildren(data, null)
 let container = document.getElementById("output")
 container.innerHTML += render;
